@@ -5,10 +5,10 @@ Date    : 2021-11-01
 This file contains mappings for DNAs and Amino Acids.
 """
 
-Nucleotides = ["A", "C", "G", "T"]
-DNA_ReverseComplement = {"A":"T", "T":"A","G":"C","C":"G"}
+DNA_Bases: tuple = ("A", "C", "G", "T")
+DNA_Complement_Mapping: dict = {"A":"T", "T":"A","G":"C","C":"G"}
 
-DNA_Codons = {
+DNA_Codons_Mapping: dict = {
     # 'M' - START, '_' - STOP
     "GCT": "A", "GCC": "A", "GCA": "A", "GCG": "A",
     "TGT": "C", "TGC": "C",
