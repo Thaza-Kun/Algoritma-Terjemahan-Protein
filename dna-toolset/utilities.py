@@ -5,7 +5,7 @@ Date    : 2021-11-01
 This file contains helping functions.
 """
 
-def colored(dna_seq: str):
+def color_text_on_print(dna_seq: str):
     bcolors = {
         "A": "\033[92m",
         "C": "\033[94m",
@@ -24,7 +24,7 @@ def colored(dna_seq: str):
             tempStr += bcolors["reset"] + nuc
     return tempStr + bcolors["reset"]
 
-def readFASTA(filePath) -> dict:
+def read_FASTA(filePath) -> dict:
     with open(filePath, 'r') as f:
         FASTAFile = [l.strip() for l in f.readlines()]
     FASTADict = {}
@@ -38,7 +38,7 @@ def readFASTA(filePath) -> dict:
     return FASTADict
 
 def test():
-    print(readFASTA("./dataset-rosalind/test-fasta.txt"))
+    print(read_FASTA("./dataset-rosalind/test-fasta.txt"))
 
 if __name__=="__main__":
     test()
