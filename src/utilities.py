@@ -1,10 +1,3 @@
-"""
-Author  : Murthadza bin Aznam
-Date    : 2021-11-01
-
-This file contains helping functions.
-"""
-
 def color_text_on_print(dna_seq: str):
     bcolors = {
         "A": "\033[92m",
@@ -24,7 +17,7 @@ def color_text_on_print(dna_seq: str):
             tempStr += bcolors["reset"] + nuc
     return tempStr + bcolors["reset"]
 
-def read_FASTA(filePath) -> dict:
+def read_FASTA(filePath: str) -> dict:
     with open(filePath, 'r') as f:
         FASTAFile = [l.strip() for l in f.readlines()]
     FASTADict = {}
@@ -36,9 +29,3 @@ def read_FASTA(filePath) -> dict:
         else:
             FASTADict[FASTALabel] += line
     return FASTADict
-
-def test():
-    print(read_FASTA("./dataset-rosalind/test-fasta.txt"))
-
-if __name__=="__main__":
-    test()

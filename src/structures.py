@@ -1,15 +1,6 @@
-"""
-Author  : Murthadza bin Aznam
-Date    : 2021-11-01
-
-This file contains mappings for DNAs and Amino Acids.
-"""
-
 DNA_Bases: tuple = ("A", "C", "G", "T")
-DNA_Complement_Mapping: dict = {"A":"T", "T":"A","G":"C","C":"G"}
 
 DNA_Codons_Mapping: dict = {
-    # 'M' - START, '_' - STOP
     "GCT": "A", "GCC": "A", "GCA": "A", "GCG": "A",
     "TGT": "C", "TGC": "C",
     "GAT": "D", "GAC": "D",
@@ -20,6 +11,7 @@ DNA_Codons_Mapping: dict = {
     "ATA": "I", "ATT": "I", "ATC": "I",
     "AAA": "K", "AAG": "K",
     "TTA": "L", "TTG": "L", "CTT": "L", "CTC": "L", "CTA": "L", "CTG": "L",
+    # 'M' - MULA
     "ATG": "M",
     "AAT": "N", "AAC": "N",
     "CCT": "P", "CCC": "P", "CCA": "P", "CCG": "P",
@@ -30,5 +22,6 @@ DNA_Codons_Mapping: dict = {
     "GTT": "V", "GTC": "V", "GTA": "V", "GTG": "V",
     "TGG": "W",
     "TAT": "Y", "TAC": "Y",
+    # '_' - BERHENTI
     "TAA": "_", "TAG": "_", "TGA": "_"
 }
